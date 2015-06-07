@@ -3,25 +3,29 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <script src="tweetApp.js"></script>
+    <link rel="stylesheet" href="tweetStyles.css" />
   </head>
+  
   <body>
-    <script>
+    <header>
+      <h1>Twittler</h1>
+    </header>
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+    <section class='nav'>
+      <h1>Users</h1>
+      <ul class='usr'></ul>
+    </section>
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+    <section class='button'>
+      <button>Tweets</button>
+    </section>
 
-      });
+    <section class='page'>
+      <article class='msg'>
+        <img src="carmen.jpg">
+      </article>
+    </section>
 
-    </script>
   </body>
 </html>
